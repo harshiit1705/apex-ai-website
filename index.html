@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apex AI — Automating Business Growth with AI</title>
-<link rel="icon" type="image/png" href="Apex2.png.png">
 <meta name="description" content="Apex AI builds custom AI automation systems that qualify leads, book appointments, and handle customer follow-up — so your business runs without the manual work.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='5' y1='27' x2='27' y2='4'%3E%3Cstop offset='0%25' stop-color='%2322D3EE'/%3E%3Cstop offset='100%25' stop-color='%232F6BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M16 3L27 27H20.5L16 16.5L11.5 27H5L16 3Z' fill='url(%23g)'/%3E%3Cpath d='M9.5 22.5Q16 14.5 22.5 22.5' stroke='%23080B12' stroke-width='2.3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 
 <style>
 /* ============================================
@@ -29,8 +29,11 @@
 
   --teal: #54E8C9;
   --teal-dim: rgba(84,232,201,0.12);
-  --amber: #FFB454;
-  --amber-dim: rgba(255,180,84,0.14);
+  --blue: #2F6BFF;
+  --blue-light: #22D3EE;
+  --blue-dim: rgba(47,107,255,0.16);
+  --grad-cta: linear-gradient(135deg, var(--blue-light), var(--blue));
+  --grad-logo: linear-gradient(135deg, #22D3EE 0%, #2F6BFF 100%);
 
   --grad-line: linear-gradient(90deg, transparent, var(--teal), transparent);
 
@@ -214,13 +217,13 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 600; letter-spacing:
   border: 1px solid transparent;
 }
 .btn-primary{
-  background: var(--amber);
-  color: #1A1206;
-  box-shadow: 0 0 0 0 rgba(255,180,84,0.4);
+  background: var(--grad-cta);
+  color: #06121F;
+  box-shadow: 0 0 0 0 rgba(47,107,255,0.4);
 }
 .btn-primary:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -4px rgba(255,180,84,0.45);
+  box-shadow: 0 8px 28px -4px rgba(47,107,255,0.5);
 }
 .btn-ghost{
   background: var(--surface);
@@ -300,7 +303,7 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 600; letter-spacing:
 .pc-title{ font-family: var(--font-mono); font-size: 12.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; }
 .pc-dots{ display:flex; gap:6px; }
 .pc-dots span{ width:8px; height:8px; border-radius:50%; background: var(--border-strong); }
-.pc-dots span:first-child{ background: var(--amber); }
+.pc-dots span:first-child{ background: var(--blue-light); }
 
 .pc-step{
   display:flex; align-items:flex-start; gap: 14px;
@@ -829,12 +832,17 @@ footer{
     <a href="#top" class="logo">
       <span class="logo-mark">
         <svg viewBox="0 0 32 32" fill="none">
-          <rect x="2" y="2" width="28" height="28" rx="8" fill="#54E8C9" fill-opacity="0.12"/>
-          <path d="M16 7L23 12V20L16 25L9 20V12L16 7Z" stroke="#54E8C9" stroke-width="1.6" stroke-linejoin="round"/>
-          <circle cx="16" cy="16" r="3" fill="#54E8C9"/>
+          <defs>
+            <linearGradient id="apexGradNav" x1="5" y1="27" x2="27" y2="4" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#22D3EE"/>
+              <stop offset="100%" stop-color="#2F6BFF"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 3L27 27H20.5L16 16.5L11.5 27H5L16 3Z" fill="url(#apexGradNav)"/>
+          <path d="M9.5 22.5Q16 14.5 22.5 22.5" stroke="#080B12" stroke-width="2.3" stroke-linecap="round" fill="none"/>
         </svg>
       </span>
-      Apex AI
+      Apex <span style="color:var(--teal);">AI</span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
@@ -857,7 +865,7 @@ footer{
 <section class="hero" id="top">
   <div class="container hero-grid">
     <div class="hero-content">
-      <div class="eyebrow">Helping Businesses Save Time Using AI Automation</div>
+      <div class="eyebrow">Founder-Led AI Automation Studio</div>
       <h1>Stop Wasting Time on <span class="hl">Repetitive Work.</span><br>Let AI Handle It.</h1>
       <p class="lead">We build AI-powered automations that qualify leads, book appointments, respond to customers, and automate repetitive business processes — so your team can focus on growth, not admin.</p>
       <div class="hero-actions">
@@ -1150,7 +1158,7 @@ footer{
     <div class="about-wrap">
       <div class="glass about-card reveal">
         <div class="about-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 7L23 12V20L16 25L9 20V12L16 7Z" transform="translate(-4,-4)"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg></div>
-        <h3 style="font-size:22px; margin-bottom:10px;">Founder-Led AI Automation Studio</h3>
+        <h3 style="font-size:22px; margin-bottom:10px;">Built by someone who codes the automations himself</h3>
         <div class="founder-tags">
           <span class="founder-tag">n8n</span>
           <span class="founder-tag">LangChain</span>
@@ -1193,7 +1201,7 @@ footer{
         </div>
         <div class="contact-channel">
           <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div><strong>LinkedIn</strong><br><a class="cc-link" href="#" target="_blank" rel="noopener"> www.linkedin.com/in/harshit-chouhan-025b82381</a></div>
+          <div><strong>LinkedIn</strong><br><a class="cc-link" href="#" target="_blank" rel="noopener">linkedin.com/in/harshit-chouhan-025b82381/</a></div>
         </div>
       </div>
 
@@ -1222,7 +1230,7 @@ footer{
             </select>
           </div>
           <div class="field">
-            <label for="fphone">Phone </label>
+            <label for="fphone">Phone (optional)</label>
             <input type="tel" id="fphone" name="phone" placeholder="+91 00000 00000">
           </div>
         </div>
@@ -1292,12 +1300,17 @@ footer{
         <a href="#top" class="logo">
           <span class="logo-mark">
             <svg viewBox="0 0 32 32" fill="none">
-              <rect x="2" y="2" width="28" height="28" rx="8" fill="#54E8C9" fill-opacity="0.12"/>
-              <path d="M16 7L23 12V20L16 25L9 20V12L16 7Z" stroke="#54E8C9" stroke-width="1.6" stroke-linejoin="round"/>
-              <circle cx="16" cy="16" r="3" fill="#54E8C9"/>
+              <defs>
+                <linearGradient id="apexGradFooter" x1="5" y1="27" x2="27" y2="4" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#22D3EE"/>
+                  <stop offset="100%" stop-color="#2F6BFF"/>
+                </linearGradient>
+              </defs>
+              <path d="M16 3L27 27H20.5L16 16.5L11.5 27H5L16 3Z" fill="url(#apexGradFooter)"/>
+              <path d="M9.5 22.5Q16 14.5 22.5 22.5" stroke="#080B12" stroke-width="2.3" stroke-linecap="round" fill="none"/>
             </svg>
           </span>
-          Apex AI
+          Apex <span style="color:var(--teal);">AI</span>
         </a>
         <p>AI Automation Solutions for real estate agencies, marketing agencies, consultants, and service businesses.</p>
       </div>
@@ -1312,7 +1325,7 @@ footer{
         <div class="footer-col">
           <strong>Connect</strong>
           <a href="mailto:hello@apexai.studio">Email</a>
-          <a href="https://wa.me/919399061577" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a>
           <a href="#" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
