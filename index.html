@@ -751,6 +751,97 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 700; letter-spacing:
 .faq-a p{ padding: 0 4px 26px; color: var(--text-muted); font-size: 15px; line-height: 1.65; max-width: 620px; }
 
 /* ============================================
+   OFFER — 7-Day Free Trial (Grand Slam Offer)
+   ============================================ */
+.offer{ position: relative; }
+.offer-card{
+  background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 55%);
+  border: 1px solid #DBEAFE;
+  border-radius: 28px;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.offer-card::before{
+  content:'';
+  position: absolute; inset:0;
+  background: radial-gradient(circle at 15% 15%, rgba(37,99,235,0.08), transparent 55%);
+  pointer-events: none;
+}
+.offer-badge{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--blue);
+  background: #FFFFFF;
+  border: 1px solid #BFDBFE;
+  padding: 7px 14px; border-radius: 999px;
+  margin-bottom: 24px;
+}
+.offer-badge::before{ content:''; width:6px; height:6px; border-radius:50%; background: var(--blue); }
+.offer-card h2{
+  color: var(--text);
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.18;
+  margin-bottom: 14px;
+  max-width: 600px;
+  position: relative;
+}
+.offer-card .offer-lead{
+  color: var(--text-muted);
+  font-size: 17px;
+  max-width: 560px;
+  margin-bottom: 38px;
+  position: relative;
+}
+.offer-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  position: relative;
+}
+.offer-list{ display:flex; flex-direction:column; gap: 16px; }
+.offer-list li{
+  display:flex; align-items:flex-start; gap: 12px;
+  color: var(--text); font-size: 15px; line-height:1.5;
+}
+.offer-list .offer-check{
+  width: 20px; height:20px; flex-shrink:0; margin-top:1px;
+  border-radius:50%;
+  background: #FFFFFF;
+  border: 1px solid #BFDBFE;
+  display:flex; align-items:center; justify-content:center;
+}
+.offer-list .offer-check svg{ width:12px; height:12px; stroke: var(--blue); }
+
+.offer-guarantee{
+  background: #FFFFFF;
+  border: 1px solid #DBEAFE;
+  border-radius: 18px;
+  padding: 28px;
+  display:flex; flex-direction:column;
+  box-shadow: var(--shadow-sm);
+}
+.offer-guarantee .og-icon{
+  width:44px; height:44px; border-radius:12px;
+  background: var(--blue-dim);
+  display:flex; align-items:center; justify-content:center;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+.offer-guarantee .og-icon svg{ width:22px;height:22px; }
+.offer-guarantee strong{ color: var(--text); font-size: 15.5px; display:block; margin-bottom:8px; }
+.offer-guarantee p{ color: var(--text-muted); font-size: 13.5px; line-height:1.6; margin-bottom:22px; }
+.offer-guarantee .btn-primary{ width:100%; }
+.offer-fine{ color: var(--text-faint); font-size:12.5px; margin-top:14px; text-align:center; }
+
+@media (max-width: 880px){
+  .offer-card{ padding: 36px 28px; }
+  .offer-grid{ grid-template-columns: 1fr; }
+}
+
+/* ============================================
    FINAL CTA
    ============================================ */
 .final-cta{
@@ -763,6 +854,7 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 700; letter-spacing:
 .final-cta h2{ font-size: clamp(30px, 4vw, 44px); margin-bottom: 18px; }
 .final-cta p{ color: var(--text-muted); margin-bottom: 36px; font-size:18px; }
 .final-actions{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+
 
 /* ============================================
    FOOTER
@@ -1224,6 +1316,35 @@ footer{ padding: 56px 0 30px; position: relative; z-index:1; }
         <h2 style="margin-bottom:20px;">A practical approach to AI automation</h2>
         <p>Apex AI helps businesses eliminate repetitive work through practical AI automation solutions. The focus is on solving real operational problems — not chasing buzzwords — and measuring success by how much time and friction actually gets removed from your day-to-day operations.</p>
         <p>Every workflow is designed, built, and tested hands-on, so what you get is a system that genuinely fits how your business runs — <strong>not a generic template stretched to fit.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="section offer" id="offer">
+  <div class="container">
+    <div class="offer-card reveal">
+      <span class="offer-badge">Limited Onboarding Slots</span>
+      <h2>Try Apex AI free for 7 days. No risk, no commitment.</h2>
+      <p class="offer-lead">See a real, working automation built for your business before you spend a single rupee — not a generic demo, the actual thing.</p>
+
+      <div class="offer-grid">
+        <ul class="offer-list">
+          <li><span class="offer-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> A working automation built for one real workflow in your business — lead qualification, booking, or follow-up</li>
+          <li><span class="offer-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Built around your actual process, not a generic template</li>
+          <li><span class="offer-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Direct access to the founder throughout the trial — no account managers, no handoffs</li>
+          <li><span class="offer-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Full visibility into exactly how the automation works, step by step</li>
+          <li><span class="offer-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Zero obligation to continue after the 7 days are up</li>
+        </ul>
+
+        <div class="offer-guarantee">
+          <div class="og-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></div>
+          <strong>Zero-risk guarantee</strong>
+          <p>If you don't see clear value within 7 days, walk away — no questions asked, no payment required. Trial slots are limited each month since every build is done hands-on.</p>
+          <a href="#contact" class="btn btn-primary">Claim My Free 7-Day Trial</a>
+          <span class="offer-fine">No credit card required to start</span>
+        </div>
       </div>
     </div>
   </div>
